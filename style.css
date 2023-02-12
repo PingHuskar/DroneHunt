@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    font-family: sans-serif;
+    user-select: none;
+}
+svg {
+    padding-top: 50px;
+    padding-left: 100px;
+}
+.axis path{
+    stroke:black;
+    stroke-width:2px ;
+}
+.axis line{
+    stroke: black;
+    stroke-width: 1.5px;
+} 
+.axis text{
+    fill: black;
+    font-weight: bold;
+    font-size: 14px;
+    font-family:"Arial Black", Gadget, sans-serif;
+}
+.legend text{
+    fill:  black;
+    font-family:"Arial Black", Gadget, sans-serif;
+}
