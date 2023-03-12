@@ -1,0 +1,49 @@
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #222;
+  color: #ddd;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container table {
+  text-align: center;
+}
+.container table tr th {
+  width: 150px;
+  padding: 5px 0;
+}
+.container table tr td, .container table tr th {
+  outline: 3px solid purple;
+}
+.container table tr td.R {
+  background: rgb(1, 181, 253);
+  color: rgb(3, 77, 184);
+}
+.container table tr td.E {
+  background: rgb(14, 247, 0);
+  color: rgb(8, 151, 0);
+}/*# sourceMappingURL=style.css.map */

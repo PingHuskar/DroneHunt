@@ -1,32 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
+
 body {
-    overflow: hidden;
-    font-family: sans-serif;
-    user-select: none;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-svg {
-    padding-top: 50px;
-    padding-left: 100px;
+
+a {
+  display: inline-block;
+  position: relative;
+  color: purple;
+  font-size: 5em;
+  text-decoration: none;
+  animation: 0.5s linear left;
 }
-.axis path{
-    stroke:black;
-    stroke-width:2px ;
+a:first-of-type {
+  margin-left: -20vw;
 }
-.axis line{
-    stroke: black;
-    stroke-width: 1.5px;
-} 
-.axis text{
-    fill: black;
-    font-weight: bold;
-    font-size: 14px;
-    font-family:"Arial Black", Gadget, sans-serif;
+a:last-of-type {
+  margin-left: 20vw;
 }
-.legend text{
-    fill:  black;
-    font-family:"Arial Black", Gadget, sans-serif;
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}/*# sourceMappingURL=style.css.map */
