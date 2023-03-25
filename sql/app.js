@@ -1,4 +1,4 @@
-document.write(`CREATE TABLE DroneHunt (
+document.write(`CREATE TABLE IF NOT EXISTS DroneHunt (
 	"id"	INTEGER,
 	"AgentID"	INTEGER,
 	"Date"	Text,
@@ -6,7 +6,7 @@ document.write(`CREATE TABLE DroneHunt (
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 <br>`)
-document.write(`CREATE TABLE Agent (
+document.write(`CREATE TABLE IF NOT EXISTS Agent (
 	"id"	INTEGER,
 	"Name"	Text,
 	"Faction"	Text,
@@ -14,10 +14,15 @@ document.write(`CREATE TABLE Agent (
 );
 <br>`)
 let AgentList = []
+document.write(`INSERT INTO Agent (Name, Faction) VALUES `)
 for (let a = 0; a < RAW.length; a++) {
-    document.write(`INSERT INTO Agent (Name, Faction)
-    VALUES ("${RAW.at(a).name}", "${RAW.at(a).fac}");
+    if (a < RAW.length - 1) {
+    document.write(`("${RAW.at(a).name}", "${RAW.at(a).fac}"),
     <br>`)
+} else {
+    document.write(`("${RAW.at(a).name}", "${RAW.at(a).fac}");
+    <br>`)
+}
     let rec = {}
     rec["id"] = a+1
     rec["name"] = RAW.at(a).name
@@ -26,11 +31,17 @@ for (let a = 0; a < RAW.length; a++) {
 }
 console.log(AgentList)
 
+document.write(`INSERT INTO DroneHunt (AgentID, Date, Score) VALUES `)
 for (let r of RAW) {
     for (let record of r.score) {
-        document.write(`INSERT INTO DroneHunt (AgentID, Date, Score)
-        VALUES (${AgentList.findIndex(a => a.name == r.name)+1},"${record.dt}",${record.dr});
+        if (RAW.at(-1) == r && r.score.at(-1) == record) {
+            document.write(`(${AgentList.findIndex(a => a.name == r.name)+1},"${record.dt}",${record.dr});
         <br>`)
+        } else {
+            document.write(`(${AgentList.findIndex(a => a.name == r.name)+1},"${record.dt}",${record.dr}),
+        <br>`)
+        }
+        
     }
 }
 document.write(`SELECT 		ROW_NUMBER() OVER (ORDER BY MAX(Score) DESC) AS "#"
