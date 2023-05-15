@@ -49,4 +49,4 @@ for (let score of scoreArray) {
 TweenMax.staggerFrom('td',1,{
     x: 100,
     scale: 0,
-},0.11)
+},-0.03)

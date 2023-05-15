@@ -1,7 +1,7 @@
-var RAW = [
-    {
-        name: "GundumKitty",
-        fac: "R",
+const RAW = [
+    { 
+        name: "GundumKitty", 
+        fac: "R", 
         score: [
             { dt: "2/11/2023", dr: 116 },
             { dt: "2/19/2023", dr: 121 },
@@ -17,16 +17,16 @@ var RAW = [
             { dt: "4/7/2023", dr: 140 },
             { dt: "4/14/2023", dr: 142 },
             { dt: "5/14/2023", dr: 143 },
-        ]
-    }, {
-        name: "SinghaLanNa",
-        fac: "R",
+        ] 
+    },{ 
+        name: "SinghaLanNa", 
+        fac: "R", 
         score: [
             { dt: "2/11/2023", dr: 113 },
             { dt: "3/21/2023", dr: 113 },
             { dt: "5/14/2023", dr: 120 },
-        ]
-    }, {
+        ] 
+    },{
         name: "PingHuskar",
         fac: "R",
         score: [
@@ -95,10 +95,10 @@ var RAW = [
             { dt: "5/6/2023", dr: 162 },
             { dt: "5/13/2023", dr: 165 },
             { dt: "5/14/2023", dr: 169 },
-        ]
-    }, {
-        name: "JongSook",
-        fac: "E",
+        ],
+    },{
+        name: "JongSook", 
+        fac: "E", 
         score: [
             { dt: "2/24/2023", dr: 152 },
             { dt: "2/27/2023", dr: 157 },
@@ -109,42 +109,43 @@ var RAW = [
             { dt: "5/4/2023", dr: 178 },
             { dt: "5/14/2023", dr: 178 },
         ]
-    }, {
-        name: "Somtuiz",
-        fac: "E",
+    },{
+        name: "Somtuiz", 
+        fac: "E", 
         score: [
             { dt: "2/24/2023", dr: 98 },
             { dt: "4/14/2023", dr: 106 },
             { dt: "5/14/2023", dr: 108 },
-        ]
-    }, { name: "muri",
-        fac: "E",
+        ] 
+    },{ name: "muri", 
+        fac: "E", 
         score: [
             { dt: "2/11/2023", dr: 31 },
             { dt: "3/11/2023", dr: 34 },
             { dt: "5/14/2023", dr: 39 },
-        ]
-    }, {
-        name: "mainiam",
-        fac: "E",
+        ] 
+    },{
+        name: "mainiam", 
+        fac: "E", 
         score: [
             { dt: "2/19/2023", dr: 45 },
             { dt: "3/8/2023", dr: 47 },
             { dt: "3/11/2023", dr: 47 },
             { dt: "3/18/2023", dr: 48 },
             { dt: "5/14/2023", dr: 50 },
-        ]
-    }, {
-        name: "pandasteak101",
-        fac: "E",
+        ] 
+    },{ 
+        name: "pandasteak101", 
+        fac: "E", 
         score: [
             { dt: "2/11/2023", dr: 30 },
             { dt: "4/14/2023", dr: 30 },
             { dt: "5/14/2023", dr: 31 },
-        ]
+        ] 
     },
 ];
-var FAC = {
+
+const FAC = {
     "E": "Enlightened",
     "R": "Resistance"
-};
+}
