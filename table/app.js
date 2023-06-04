@@ -35,7 +35,7 @@ for (let score of scoreArray) {
             tablerow.append("td").text(r.name)
             tablerow.append("td").attr("class",r.fac).text(FAC[r.fac])
             tablerow.append("td").text(numberWithCommas(r.score.at(-1).dr))
-            tablerow.append("td").text(numberWithCommas(scoreArray.at(0) - r.score.at(-1).dr) == 0 ? '-' : numberWithCommas(scoreArray.at(0) - r.score.at(-1).dr))
+            tablerow.append("td").text(numberWithCommas(scoreArray.at(0) - r.score.at(-1).dr) == 0 ? '-' : numberWithCommas(scoreArray.at(0) - r.score.at(-1).dr + 1))
             // tablerow.append("td").text(r.score.at(-1).dt)
             tablerow.append("td").text(
                 parseInt(moment.duration(TODAYDATE.diff(r.score.at(-1).dt)).asDays()) < 2
